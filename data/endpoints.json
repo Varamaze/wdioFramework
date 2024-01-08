@@ -1,0 +1,6 @@
+{
+    "GET_USER": "/getUser",
+    "LOGIN": "/login",
+    "SOURCES_DEFINITION": "/web/source-definitions",
+    "ADD_SOURCE": "/workspaces/?/sources/"
+}

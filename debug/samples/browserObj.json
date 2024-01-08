@@ -1,0 +1,4186 @@
+[
+    {
+        "id": "2Dkjuo0pqxa0wJwBqmI4Hh9wyc9",
+        "name": "singer-sendgrid",
+        "displayName": "Sendgrid",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-sendgrid:v5.3.0-incomplete-data-fix",
+            "isBeta": false
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2UyYUiURYmO3TKjV8uzPKRkpagr",
+        "name": "trino",
+        "displayName": "Trino",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\\-]*[a-zA-Z0-9])\\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\\-]*[A-Za-z0-9])$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Catalog Name",
+                        "regex": "^(.{0,100})$",
+                        "value": "catalog",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": false,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value"
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "",
+                    "setupInstructions": "",
+                    "verifyingCredentials": "",
+                    "jsonMapperUseInstructions": ""
+                },
+                "nameField": "user",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "hidden": true,
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isAudienceSupported": true,
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "24VPFifQ0rEgLgrUzlM71Xeq0uw",
+        "name": "singer-klaviyo",
+        "displayName": "Klaviyo",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-klaviyo:v7.1.1-alpha.ea2e0337e7"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "24uU1k8fCOXZ6fvjfFu64jZdM46",
+        "name": "Shopify",
+        "displayName": "Shopify",
+        "category": "webhook",
+        "uiConfig": [
+            {
+                "title": "Connection Settings",
+                "fields": [
+                    {
+                        "type": "checkbox",
+                        "label": "Disable client side identifier",
+                        "value": "disableClientSideIdentifier",
+                        "default": false,
+                        "footerNote": "Disables client side identifier in shopify tracker"
+                    }
+                ]
+            }
+        ],
+        "options": {
+            "hidden": false,
+            "isBeta": false
+        },
+        "type": "shopify"
+    },
+    {
+        "id": "1QGzOQGVLM35GgtteFH1vYCE0WT",
+        "name": "Android",
+        "displayName": "Android",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "android"
+    },
+    {
+        "id": "1eeJempKYrNptbb6EbYy3NH9jZK",
+        "name": "Auth0",
+        "displayName": "Auth0",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "2G2FNT3WpW29UyqPG3LO2uUcUVH",
+        "name": "hubspot_crm",
+        "displayName": "Hubspot CRM",
+        "category": "cloud",
+        "uiConfig": null,
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1n5ooFOf8mzxKwvoKUSVRGRwyCb",
+        "name": "appsflyer",
+        "displayName": "AppsFlyer",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1ogo5AXQB6JnsHiqDXZ6jl5ZerJ",
+        "name": "Flutter",
+        "displayName": "Flutter",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "flutter"
+    },
+    {
+        "id": "1zEeCwCRwQqoKuXqz3VamLt0Mji",
+        "name": "Braze",
+        "displayName": "Braze",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1qTXDy2DFNLHRqixzii5fuOikjG",
+        "name": "Extole",
+        "displayName": "Extole",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1eoDpOgZNFaSB20NvAcAbFTlBkJ",
+        "name": "Segment",
+        "displayName": "Segment",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1ar6mNtsvScWgjGzkIs9iLta8Yy",
+        "name": "Python",
+        "displayName": "Python",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1cRofQ9LF9HLEKuIyYY4FMteELx",
+        "name": "Customerio",
+        "displayName": "Customerio",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "208zXxTTxue5sSP4E4W1Hzf2XL4",
+        "name": "Rust",
+        "displayName": "Rust",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1yOJu6S8oTXWcqQj8jaO4TJQkiP",
+        "name": "Cordova",
+        "displayName": "Cordova",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cordova"
+    },
+    {
+        "id": "2GcyRTq2yzk7Lwe3iSbpxOpuHoa",
+        "name": "refiner",
+        "displayName": "Refiner",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1TW48i2bIzEl1HPf825cEznfIM8",
+        "name": "Javascript",
+        "displayName": "Javascript",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "web"
+    },
+    {
+        "id": "1pD6vnvEtSbRDlkcQy551N1beKh",
+        "name": "POSTHOG",
+        "displayName": "PostHog",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1qu6ivu5iPasot1ZIK6mcb59j7t",
+        "name": "freshdesk",
+        "displayName": "Freshdesk",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": ".*",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Subdomain",
+                                "value": "subdomain",
+                                "required": true
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "API Key",
+                                "value": "apiKey",
+                                "required": true
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "apiKey"
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1drwwPLMGMMo1YLM16u0UWgv3nx",
+        "name": "Looker",
+        "displayName": "Looker",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "2G56lK210UjQlH9wDD5JT98iG6w",
+        "name": "mailjet",
+        "displayName": "MailJet",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1k7JZrvZQ7OPBAnHzogYIpansx2",
+        "name": "PHP",
+        "displayName": "PHP",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "2IXTQKovbh3MilteDOuJOAYPvxL",
+        "name": "olark",
+        "displayName": "Olark",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1b6gJdqOPOCadT3cddw8eidV591",
+        "name": "HTTP",
+        "displayName": "HTTP",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1QGzOCoEznfENfRDG0gBuPlsdM4",
+        "name": "iOS",
+        "displayName": "iOS",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "ios"
+    },
+    {
+        "id": "2FTxMr2bCV0IiPBrwD7QRcHYCMF",
+        "name": "singer-customer-io",
+        "displayName": "Customer.io",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/customer-io-source:v1.1.0",
+            "digest": "sha256:0582066144cadc5980acf586b1b5ceb6d293f7706aae0d0bea91e558717409a8"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1pTcNPYFDAwN8JvQbxTZ3XSdR8I",
+        "name": "Appcenter",
+        "displayName": "App Center",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1cD32rPRAgRxakAPoN8q1F4rnlO",
+        "name": "AMP",
+        "displayName": "AMP",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "amp"
+    },
+    {
+        "id": "1ZOGFXJtyEeTgUEBLLTjra1oDQP",
+        "name": "Ruby",
+        "displayName": "Ruby",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1eB3UGPqUNS4L5tKWxchQUHJTPD",
+        "name": "Java",
+        "displayName": "Java",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1ZOGGKKNJDJ5K4Or2BnxYVCt5bA",
+        "name": "Go",
+        "displayName": "Go",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1k4TuOH726pC37bgJYkSCaeFcZ1",
+        "name": "DotNet",
+        "displayName": ".Net",
+        "category": "",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "1jEXwajA1sUI7zkcsrByqLuXBSa",
+        "name": "salesforce",
+        "displayName": "Salesforce",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1qu6kGyHNkM4IjcaFXGIO7G0SGy",
+        "name": "hubspot",
+        "displayName": "Hubspot",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "singleSelect",
+                                "label": "Hubspot software",
+                                "value": "role",
+                                "options": [
+                                    {
+                                        "name": "Marketing",
+                                        "value": "hubspot"
+                                    },
+                                    {
+                                        "name": "CRM",
+                                        "value": "hubspot_crm"
+                                    }
+                                ],
+                                "required": true,
+                                "defaultOption": {
+                                    "name": "Marketing",
+                                    "value": "hubspot"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "24bCCxQUN8sZgedSRGJM9Mr3S43",
+        "name": "singer-iterable",
+        "displayName": "Iterable",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-iterable:v6.3.5"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1ovmFVThz3asZ1YwBo5w351G2Co",
+        "name": "mailchimp",
+        "displayName": "Mailchimp",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "singleSelect",
+                            "label": "Earliest campaign year",
+                            "value": "firstTimeFetchCampaignsSinceYear",
+                            "default": 2019,
+                            "options": [
+                                2020,
+                                2019,
+                                2018,
+                                2017,
+                                2016,
+                                2015
+                            ],
+                            "required": true,
+                            "footerNote": "Fetch monthly reports starting from this year."
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Campaign fetch period",
+                            "value": "fetchCampaignsDaysAgo",
+                            "default": 1,
+                            "options": [
+                                {
+                                    "name": "1 day",
+                                    "value": 1
+                                },
+                                {
+                                    "name": "1 week",
+                                    "value": 7
+                                },
+                                {
+                                    "name": "2 weeks",
+                                    "value": 14
+                                },
+                                {
+                                    "name": "1 month",
+                                    "value": 30
+                                }
+                            ],
+                            "required": true,
+                            "footerNote": "Starting month for each monthly report."
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": null,
+        "type": "cloudSource"
+    },
+    {
+        "id": "2KDO7dWhVXgKtb9hUEmhVu9SaJo",
+        "name": "moengage",
+        "displayName": "MoEngage",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {
+            "hidden": false
+        },
+        "type": "cloud"
+    },
+    {
+        "id": "2EifCqpwJ9dX9RFU6ccmpQNxTlR",
+        "name": "mailmodo",
+        "displayName": "Mailmodo",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2EyXYZuAvEbAoGtRtID3Xp6C4kj",
+        "name": "monday",
+        "displayName": "Monday Source",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2BejLHmtc0eo92dUkF08ueDoaD2",
+        "name": "singer-google-search-console",
+        "displayName": "Google Search Console",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "provider": "Google"
+            },
+            "image": "rudderstack/source-google-search-console:v2.0.3-alpha.10"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1wJ48CjxXYRhxm83W8xFGTQygxt",
+        "name": "webhook",
+        "displayName": "Webhook Source",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "2EO1bngnOQXN4O3hCHFV2IuCAuk",
+        "name": "singer-google-analytics",
+        "displayName": "Google Analytics",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "provider": "Google",
+                "oauthRole": "singer-google-analytics"
+            },
+            "image": "rudderstack/source-google-analytics:v5.1.0",
+            "gaMetricIds": [
+                "ga:users",
+                "ga:visitors",
+                "ga:newUsers",
+                "ga:newVisits",
+                "ga:percentNewSessions",
+                "ga:percentNewVisits",
+                "ga:1dayUsers",
+                "ga:7dayUsers",
+                "ga:14dayUsers",
+                "ga:28dayUsers",
+                "ga:30dayUsers",
+                "ga:sessions",
+                "ga:visits",
+                "ga:bounces",
+                "ga:bounceRate",
+                "ga:visitBounceRate",
+                "ga:sessionDuration",
+                "ga:avgSessionDuration",
+                "ga:organicSearches",
+                "ga:impressions",
+                "ga:adClicks",
+                "ga:adCost",
+                "ga:CPM",
+                "ga:CPC",
+                "ga:CTR",
+                "ga:costPerTransaction",
+                "ga:costPerGoalConversion",
+                "ga:costPerConversion",
+                "ga:RPC",
+                "ga:ROI",
+                "ga:margin",
+                "ga:ROAS",
+                "ga:goalXXStarts",
+                "ga:goalStartsAll",
+                "ga:goalXXCompletions",
+                "ga:goalCompletionsAll",
+                "ga:goalXXValue",
+                "ga:goalValueAll",
+                "ga:goalValuePerSession",
+                "ga:goalValuePerVisit",
+                "ga:goalXXConversionRate",
+                "ga:goalConversionRateAll",
+                "ga:goalXXAbandons",
+                "ga:goalAbandonsAll",
+                "ga:goalXXAbandonRate",
+                "ga:goalAbandonRateAll",
+                "ga:pageValue",
+                "ga:entrances",
+                "ga:entranceRate",
+                "ga:pageviews",
+                "ga:pageviewsPerSession",
+                "ga:pageviewsPerVisit",
+                "ga:contentGroupUniqueViewsXX",
+                "ga:uniquePageviews",
+                "ga:timeOnPage",
+                "ga:avgTimeOnPage",
+                "ga:exits",
+                "ga:exitRate",
+                "ga:searchResultViews",
+                "ga:searchUniques",
+                "ga:avgSearchResultViews",
+                "ga:searchSessions",
+                "ga:searchVisits",
+                "ga:percentSessionsWithSearch",
+                "ga:percentVisitsWithSearch",
+                "ga:searchDepth",
+                "ga:avgSearchDepth",
+                "ga:searchRefinements",
+                "ga:percentSearchRefinements",
+                "ga:searchDuration",
+                "ga:avgSearchDuration",
+                "ga:searchExits",
+                "ga:searchExitRate",
+                "ga:searchGoalXXConversionRate",
+                "ga:searchGoalConversionRateAll",
+                "ga:goalValueAllPerSearch",
+                "ga:pageLoadTime",
+                "ga:pageLoadSample",
+                "ga:avgPageLoadTime",
+                "ga:domainLookupTime",
+                "ga:avgDomainLookupTime",
+                "ga:pageDownloadTime",
+                "ga:avgPageDownloadTime",
+                "ga:redirectionTime",
+                "ga:avgRedirectionTime",
+                "ga:serverConnectionTime",
+                "ga:avgServerConnectionTime",
+                "ga:serverResponseTime",
+                "ga:avgServerResponseTime",
+                "ga:speedMetricsSample",
+                "ga:domInteractiveTime",
+                "ga:avgDomInteractiveTime",
+                "ga:domContentLoadedTime",
+                "ga:avgDomContentLoadedTime",
+                "ga:domLatencyMetricsSample",
+                "ga:screenviews",
+                "ga:uniqueScreenviews",
+                "ga:uniqueAppviews",
+                "ga:screenviewsPerSession",
+                "ga:timeOnScreen",
+                "ga:avgScreenviewDuration",
+                "ga:totalEvents",
+                "ga:uniqueDimensionCombinations",
+                "ga:uniqueEvents",
+                "ga:eventValue",
+                "ga:avgEventValue",
+                "ga:sessionsWithEvent",
+                "ga:visitsWithEvent",
+                "ga:eventsPerSessionWithEvent",
+                "ga:eventsPerVisitWithEvent",
+                "ga:transactions",
+                "ga:transactionsPerSession",
+                "ga:transactionsPerVisit",
+                "ga:transactionRevenue",
+                "ga:revenuePerTransaction",
+                "ga:transactionRevenuePerSession",
+                "ga:transactionRevenuePerVisit",
+                "ga:transactionShipping",
+                "ga:transactionTax",
+                "ga:totalValue",
+                "ga:itemQuantity",
+                "ga:uniquePurchases",
+                "ga:revenuePerItem",
+                "ga:itemRevenue",
+                "ga:itemsPerPurchase",
+                "ga:localTransactionRevenue",
+                "ga:localTransactionShipping",
+                "ga:localTransactionTax",
+                "ga:localItemRevenue",
+                "ga:socialInteractions",
+                "ga:uniqueSocialInteractions",
+                "ga:socialInteractionsPerSession",
+                "ga:socialInteractionsPerVisit",
+                "ga:userTimingValue",
+                "ga:userTimingSample",
+                "ga:avgUserTimingValue",
+                "ga:exceptions",
+                "ga:exceptionsPerScreenview",
+                "ga:fatalExceptions",
+                "ga:fatalExceptionsPerScreenview",
+                "ga:metricXX",
+                "ga:dcmFloodlightQuantity",
+                "ga:dcmFloodlightRevenue",
+                "ga:adsenseRevenue",
+                "ga:adsenseAdUnitsViewed",
+                "ga:adsenseAdsViewed",
+                "ga:adsenseAdsClicks",
+                "ga:adsensePageImpressions",
+                "ga:adsenseCTR",
+                "ga:adsenseECPM",
+                "ga:adsenseExits",
+                "ga:adsenseViewableImpressionPercent",
+                "ga:adsenseCoverage",
+                "ga:totalPublisherImpressions",
+                "ga:totalPublisherCoverage",
+                "ga:totalPublisherMonetizedPageviews",
+                "ga:totalPublisherImpressionsPerSession",
+                "ga:totalPublisherViewableImpressionsPercent",
+                "ga:totalPublisherClicks",
+                "ga:totalPublisherCTR",
+                "ga:totalPublisherRevenue",
+                "ga:totalPublisherRevenuePer1000Sessions",
+                "ga:totalPublisherECPM",
+                "ga:adxImpressions",
+                "ga:adxCoverage",
+                "ga:adxMonetizedPageviews",
+                "ga:adxImpressionsPerSession",
+                "ga:adxViewableImpressionsPercent",
+                "ga:adxClicks",
+                "ga:adxCTR",
+                "ga:adxRevenue",
+                "ga:adxRevenuePer1000Sessions",
+                "ga:adxECPM",
+                "ga:dfpImpressions",
+                "ga:dfpCoverage",
+                "ga:dfpMonetizedPageviews",
+                "ga:dfpImpressionsPerSession",
+                "ga:dfpViewableImpressionsPercent",
+                "ga:dfpClicks",
+                "ga:dfpCTR",
+                "ga:dfpRevenue",
+                "ga:dfpRevenuePer1000Sessions",
+                "ga:dfpECPM",
+                "ga:backfillImpressions",
+                "ga:backfillCoverage",
+                "ga:backfillMonetizedPageviews",
+                "ga:backfillImpressionsPerSession",
+                "ga:backfillViewableImpressionsPercent",
+                "ga:backfillClicks",
+                "ga:backfillCTR",
+                "ga:backfillRevenue",
+                "ga:backfillRevenuePer1000Sessions",
+                "ga:backfillECPM",
+                "ga:buyToDetailRate",
+                "ga:calcMetric_<NAME>",
+                "ga:cartToDetailRate",
+                "ga:cohortActiveUsers",
+                "ga:cohortAppviewsPerUser",
+                "ga:cohortAppviewsPerUserWithLifetimeCriteria",
+                "ga:cohortGoalCompletionsPerUser",
+                "ga:cohortGoalCompletionsPerUserWithLifetimeCriteria",
+                "ga:cohortPageviewsPerUser",
+                "ga:cohortPageviewsPerUserWithLifetimeCriteria",
+                "ga:cohortRetentionRate",
+                "ga:cohortRevenuePerUser",
+                "ga:cohortRevenuePerUserWithLifetimeCriteria",
+                "ga:cohortSessionDurationPerUser",
+                "ga:cohortSessionDurationPerUserWithLifetimeCriteria",
+                "ga:cohortSessionsPerUser",
+                "ga:cohortSessionsPerUserWithLifetimeCriteria",
+                "ga:cohortTotalUsers",
+                "ga:cohortTotalUsersWithLifetimeCriteria",
+                "ga:dbmCPA",
+                "ga:dbmCPC",
+                "ga:dbmCPM",
+                "ga:dbmCTR",
+                "ga:dbmClicks",
+                "ga:dbmConversions",
+                "ga:dbmCost",
+                "ga:dbmImpressions",
+                "ga:dbmROAS",
+                "ga:dcmCPC",
+                "ga:dcmCTR",
+                "ga:dcmClicks",
+                "ga:dcmCost",
+                "ga:dcmImpressions",
+                "ga:dcmMargin",
+                "ga:dcmROAS",
+                "ga:dcmRPC",
+                "ga:dsCPC",
+                "ga:dsCTR",
+                "ga:dsClicks",
+                "ga:dsCost",
+                "ga:dsImpressions",
+                "ga:dsProfit",
+                "ga:dsReturnOnAdSpend",
+                "ga:dsRevenuePerClick",
+                "ga:hits",
+                "ga:internalPromotionCTR",
+                "ga:internalPromotionClicks",
+                "ga:internalPromotionViews",
+                "ga:localProductRefundAmount",
+                "ga:localRefundAmount",
+                "ga:productAddsToCart",
+                "ga:productCheckouts",
+                "ga:productDetailViews",
+                "ga:productListCTR",
+                "ga:productListClicks",
+                "ga:productListViews",
+                "ga:productRefundAmount",
+                "ga:productRefunds",
+                "ga:productRemovesFromCart",
+                "ga:productRevenuePerPurchase",
+                "ga:quantityAddedToCart",
+                "ga:quantityCheckedOut",
+                "ga:quantityRefunded",
+                "ga:quantityRemovedFromCart",
+                "ga:refundAmount",
+                "ga:revenuePerUser",
+                "ga:sessionsPerUser",
+                "ga:totalRefunds",
+                "ga:transactionsPerUser"
+            ],
+            "gaDimensionIds": [
+                "ga:userType",
+                "ga:visitorType",
+                "ga:sessionCount",
+                "ga:visitCount",
+                "ga:daysSinceLastSession",
+                "ga:userDefinedValue",
+                "ga:userBucket",
+                "ga:sessionDurationBucket",
+                "ga:visitLength",
+                "ga:referralPath",
+                "ga:fullReferrer",
+                "ga:campaign",
+                "ga:source",
+                "ga:medium",
+                "ga:sourceMedium",
+                "ga:keyword",
+                "ga:adContent",
+                "ga:socialNetwork",
+                "ga:hasSocialSourceReferral",
+                "ga:adGroup",
+                "ga:adSlot",
+                "ga:adDistributionNetwork",
+                "ga:adMatchType",
+                "ga:adKeywordMatchType",
+                "ga:adMatchedQuery",
+                "ga:adPlacementDomain",
+                "ga:adPlacementUrl",
+                "ga:adFormat",
+                "ga:adTargetingType",
+                "ga:adTargetingOption",
+                "ga:adDisplayUrl",
+                "ga:adDestinationUrl",
+                "ga:adwordsCustomerID",
+                "ga:adwordsCampaignID",
+                "ga:adwordsAdGroupID",
+                "ga:adwordsCreativeID",
+                "ga:adwordsCriteriaID",
+                "ga:adQueryWordCount",
+                "ga:goalCompletionLocation",
+                "ga:goalPreviousStep1",
+                "ga:goalPreviousStep2",
+                "ga:goalPreviousStep3",
+                "ga:browser",
+                "ga:browserVersion",
+                "ga:operatingSystem",
+                "ga:operatingSystemVersion",
+                "ga:mobileDeviceBranding",
+                "ga:mobileDeviceModel",
+                "ga:mobileInputSelector",
+                "ga:mobileDeviceInfo",
+                "ga:mobileDeviceMarketingName",
+                "ga:deviceCategory",
+                "ga:continent",
+                "ga:subContinent",
+                "ga:country",
+                "ga:region",
+                "ga:metro",
+                "ga:city",
+                "ga:latitude",
+                "ga:longitude",
+                "ga:networkDomain",
+                "ga:networkLocation",
+                "ga:flashVersion",
+                "ga:javaEnabled",
+                "ga:language",
+                "ga:screenColors",
+                "ga:sourcePropertyDisplayName",
+                "ga:sourcePropertyTrackingId",
+                "ga:screenResolution",
+                "ga:socialActivityContentUrl",
+                "ga:hostname",
+                "ga:pagePath",
+                "ga:pagePathLevel1",
+                "ga:pagePathLevel2",
+                "ga:pagePathLevel3",
+                "ga:pagePathLevel4",
+                "ga:pageTitle",
+                "ga:landingPagePath",
+                "ga:secondPagePath",
+                "ga:exitPagePath",
+                "ga:previousPagePath",
+                "ga:pageDepth",
+                "ga:searchUsed",
+                "ga:searchKeyword",
+                "ga:searchKeywordRefinement",
+                "ga:searchCategory",
+                "ga:searchStartPage",
+                "ga:searchDestinationPage",
+                "ga:searchAfterDestinationPage",
+                "ga:appInstallerId",
+                "ga:appVersion",
+                "ga:appName",
+                "ga:appId",
+                "ga:screenName",
+                "ga:screenDepth",
+                "ga:landingScreenName",
+                "ga:exitScreenName",
+                "ga:eventCategory",
+                "ga:eventAction",
+                "ga:eventLabel",
+                "ga:transactionId",
+                "ga:affiliation",
+                "ga:sessionsToTransaction",
+                "ga:visitsToTransaction",
+                "ga:daysToTransaction",
+                "ga:productSku",
+                "ga:productName",
+                "ga:productCategory",
+                "ga:currencyCode",
+                "ga:socialInteractionNetwork",
+                "ga:socialInteractionAction",
+                "ga:socialInteractionNetworkAction",
+                "ga:socialInteractionTarget",
+                "ga:socialEngagementType",
+                "ga:userTimingCategory",
+                "ga:userTimingLabel",
+                "ga:userTimingVariable",
+                "ga:exceptionDescription",
+                "ga:experimentId",
+                "ga:experimentVariant",
+                "ga:dimensionXX",
+                "ga:customVarNameXX",
+                "ga:customVarValueXX",
+                "ga:date",
+                "ga:year",
+                "ga:month",
+                "ga:week",
+                "ga:day",
+                "ga:hour",
+                "ga:minute",
+                "ga:nthMonth",
+                "ga:nthWeek",
+                "ga:nthDay",
+                "ga:nthMinute",
+                "ga:dayOfWeek",
+                "ga:dayOfWeekName",
+                "ga:dateHour",
+                "ga:dateHourMinute",
+                "ga:yearMonth",
+                "ga:yearWeek",
+                "ga:isoWeek",
+                "ga:isoYear",
+                "ga:isoYearIsoWeek",
+                "ga:dcmClickAd",
+                "ga:dcmClickAdId",
+                "ga:dcmClickAdType",
+                "ga:dcmClickAdTypeId",
+                "ga:dcmClickAdvertiser",
+                "ga:dcmClickAdvertiserId",
+                "ga:dcmClickCampaign",
+                "ga:dcmClickCampaignId",
+                "ga:dcmClickCreativeId",
+                "ga:dcmClickCreative",
+                "ga:dcmClickRenderingId",
+                "ga:dcmClickCreativeType",
+                "ga:dcmClickCreativeTypeId",
+                "ga:dcmClickCreativeVersion",
+                "ga:dcmClickSite",
+                "ga:dcmClickSiteId",
+                "ga:dcmClickSitePlacement",
+                "ga:dcmClickSitePlacementId",
+                "ga:dcmClickSpotId",
+                "ga:dcmFloodlightActivity",
+                "ga:dcmFloodlightActivityAndGroup",
+                "ga:dcmFloodlightActivityGroup",
+                "ga:dcmFloodlightActivityGroupId",
+                "ga:dcmFloodlightActivityId",
+                "ga:dcmFloodlightAdvertiserId",
+                "ga:dcmFloodlightSpotId",
+                "ga:dcmLastEventAd",
+                "ga:dcmLastEventAdId",
+                "ga:dcmLastEventAdType",
+                "ga:dcmLastEventAdTypeId",
+                "ga:dcmLastEventAdvertiser",
+                "ga:dcmLastEventAdvertiserId",
+                "ga:dcmLastEventAttributionType",
+                "ga:dcmLastEventCampaign",
+                "ga:dcmLastEventCampaignId",
+                "ga:dcmLastEventCreativeId",
+                "ga:dcmLastEventCreative",
+                "ga:dcmLastEventRenderingId",
+                "ga:dcmLastEventCreativeType",
+                "ga:dcmLastEventCreativeTypeId",
+                "ga:dcmLastEventCreativeVersion",
+                "ga:dcmLastEventSite",
+                "ga:dcmLastEventSiteId",
+                "ga:dcmLastEventSitePlacement",
+                "ga:dcmLastEventSitePlacementId",
+                "ga:dcmLastEventSpotId",
+                "ga:landingContentGroupXX",
+                "ga:previousContentGroupXX",
+                "ga:contentGroupXX",
+                "ga:userAgeBracket",
+                "ga:visitorAgeBracket",
+                "ga:userGender",
+                "ga:visitorGender",
+                "ga:interestOtherCategory",
+                "ga:interestAffinityCategory",
+                "ga:interestInMarketCategory",
+                "ga:dfpLineItemId",
+                "ga:dfpLineItemName",
+                "ga:acquisitionCampaign",
+                "ga:acquisitionMedium",
+                "ga:acquisitionSource",
+                "ga:acquisitionSourceMedium",
+                "ga:acquisitionTrafficChannel",
+                "ga:browserSize",
+                "ga:campaignCode",
+                "ga:channelGrouping",
+                "ga:checkoutOptions",
+                "ga:cityId",
+                "ga:cohort",
+                "ga:cohortNthDay",
+                "ga:cohortNthMonth",
+                "ga:cohortNthWeek",
+                "ga:continentId",
+                "ga:countryIsoCode",
+                "ga:dataSource",
+                "ga:dbmClickAdvertiser",
+                "ga:dbmClickAdvertiserId",
+                "ga:dbmClickCreativeId",
+                "ga:dbmClickExchange",
+                "ga:dbmClickExchangeId",
+                "ga:dbmClickInsertionOrder",
+                "ga:dbmClickInsertionOrderId",
+                "ga:dbmClickLineItem",
+                "ga:dbmClickLineItemId",
+                "ga:dbmClickSite",
+                "ga:dbmClickSiteId",
+                "ga:dbmLastEventAdvertiser",
+                "ga:dbmLastEventAdvertiserId",
+                "ga:dbmLastEventCreativeId",
+                "ga:dbmLastEventExchange",
+                "ga:dbmLastEventExchangeId",
+                "ga:dbmLastEventInsertionOrder",
+                "ga:dbmLastEventInsertionOrderId",
+                "ga:dbmLastEventLineItem",
+                "ga:dbmLastEventLineItemId",
+                "ga:dbmLastEventSite",
+                "ga:dbmLastEventSiteId",
+                "ga:dsAdGroup",
+                "ga:dsAdGroupId",
+                "ga:dsAdvertiser",
+                "ga:dsAdvertiserId",
+                "ga:dsAgency",
+                "ga:dsAgencyId",
+                "ga:dsCampaign",
+                "ga:dsCampaignId",
+                "ga:dsEngineAccount",
+                "ga:dsEngineAccountId",
+                "ga:dsKeyword",
+                "ga:dsKeywordId",
+                "ga:experimentCombination",
+                "ga:experimentName",
+                "ga:internalPromotionCreative",
+                "ga:internalPromotionId",
+                "ga:internalPromotionName",
+                "ga:internalPromotionPosition",
+                "ga:isTrueViewVideoAd",
+                "ga:metroId",
+                "ga:nthHour",
+                "ga:orderCouponCode",
+                "ga:productBrand",
+                "ga:productCategoryHierarchy",
+                "ga:productCategoryLevelXX",
+                "ga:productCouponCode",
+                "ga:productListName",
+                "ga:productListPosition",
+                "ga:productVariant",
+                "ga:regionId",
+                "ga:regionIsoCode",
+                "ga:shoppingStage",
+                "ga:subContinentCode"
+            ]
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1ovmHPvWYIcC1xPS4sWcPPqZWJv",
+        "name": "mixpanel",
+        "displayName": "Mixpanel",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": ".*",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "API Key",
+                                "value": "apikey",
+                                "required": true
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "API Secret",
+                                "value": "apisecret",
+                                "required": true
+                            },
+                            {
+                                "type": "singleSelect",
+                                "label": "Project timezone",
+                                "value": "timezone",
+                                "default": "UTC",
+                                "options": [
+                                    "US/Alaska",
+                                    "US/Arizona",
+                                    "US/Central",
+                                    "US/Eastern",
+                                    "US/Hawaii",
+                                    "US/Mountain",
+                                    "US/Pacific",
+                                    "Africa/Abidjan",
+                                    "Africa/Accra",
+                                    "Africa/Addis_Ababa",
+                                    "Africa/Algiers",
+                                    "Africa/Asmara",
+                                    "Africa/Bamako",
+                                    "Africa/Bangui",
+                                    "Africa/Banjul",
+                                    "Africa/Bissau",
+                                    "Africa/Blantyre",
+                                    "Africa/Brazzaville",
+                                    "Africa/Bujumbura",
+                                    "Africa/Cairo",
+                                    "Africa/Casablanca",
+                                    "Africa/Ceuta",
+                                    "Africa/Conakry",
+                                    "Africa/Dakar",
+                                    "Africa/Dar_es_Salaam",
+                                    "Africa/Djibouti",
+                                    "Africa/Douala",
+                                    "Africa/El_Aaiun",
+                                    "Africa/Freetown",
+                                    "Africa/Gaborone",
+                                    "Africa/Harare",
+                                    "Africa/Johannesburg",
+                                    "Africa/Kampala",
+                                    "Africa/Khartoum",
+                                    "Africa/Kigali",
+                                    "Africa/Kinshasa",
+                                    "Africa/Lagos",
+                                    "Africa/Libreville",
+                                    "Africa/Lome",
+                                    "Africa/Luanda",
+                                    "Africa/Lubumbashi",
+                                    "Africa/Lusaka",
+                                    "Africa/Malabo",
+                                    "Africa/Maputo",
+                                    "Africa/Maseru",
+                                    "Africa/Mbabane",
+                                    "Africa/Mogadishu",
+                                    "Africa/Monrovia",
+                                    "Africa/Nairobi",
+                                    "Africa/Ndjamena",
+                                    "Africa/Niamey",
+                                    "Africa/Nouakchott",
+                                    "Africa/Ouagadougou",
+                                    "Africa/Porto-Novo",
+                                    "Africa/Sao_Tome",
+                                    "Africa/Tripoli",
+                                    "Africa/Tunis",
+                                    "Africa/Windhoek",
+                                    "America/Adak",
+                                    "America/Anchorage",
+                                    "America/Anguilla",
+                                    "America/Antigua",
+                                    "America/Araguaina",
+                                    "America/Argentina/Buenos_Aires",
+                                    "America/Argentina/Catamarca",
+                                    "America/Argentina/Cordoba",
+                                    "America/Argentina/Jujuy",
+                                    "America/Argentina/La_Rioja",
+                                    "America/Argentina/Mendoza",
+                                    "America/Argentina/Rio_Gallegos",
+                                    "America/Argentina/Salta",
+                                    "America/Argentina/San_Juan",
+                                    "America/Argentina/San_Luis",
+                                    "America/Argentina/Tucuman",
+                                    "America/Argentina/Ushuaia",
+                                    "America/Aruba",
+                                    "America/Asuncion",
+                                    "America/Atikokan",
+                                    "America/Bahia",
+                                    "America/Bahia_Banderas",
+                                    "America/Barbados",
+                                    "America/Belem",
+                                    "America/Belize",
+                                    "America/Blanc-Sablon",
+                                    "America/Boa_Vista",
+                                    "America/Bogota",
+                                    "America/Boise",
+                                    "America/Cambridge_Bay",
+                                    "America/Campo_Grande",
+                                    "America/Cancun",
+                                    "America/Caracas",
+                                    "America/Cayenne",
+                                    "America/Cayman",
+                                    "America/Chicago",
+                                    "America/Chihuahua",
+                                    "America/Costa_Rica",
+                                    "America/Cuiaba",
+                                    "America/Curacao",
+                                    "America/Danmarkshavn",
+                                    "America/Dawson",
+                                    "America/Dawson_Creek",
+                                    "America/Denver",
+                                    "America/Detroit",
+                                    "America/Dominica",
+                                    "America/Edmonton",
+                                    "America/Eirunepe",
+                                    "America/El_Salvador",
+                                    "America/Fortaleza",
+                                    "America/Glace_Bay",
+                                    "America/Godthab",
+                                    "America/Goose_Bay",
+                                    "America/Grand_Turk",
+                                    "America/Grenada",
+                                    "America/Guadeloupe",
+                                    "America/Guatemala",
+                                    "America/Guayaquil",
+                                    "America/Guyana",
+                                    "America/Halifax",
+                                    "America/Havana",
+                                    "America/Hermosillo",
+                                    "America/Indiana/Indianapolis",
+                                    "America/Indiana/Knox",
+                                    "America/Indiana/Marengo",
+                                    "America/Indiana/Petersburg",
+                                    "America/Indiana/Tell_City",
+                                    "America/Indiana/Vevay",
+                                    "America/Indiana/Vincennes",
+                                    "America/Indiana/Winamac",
+                                    "America/Inuvik",
+                                    "America/Iqaluit",
+                                    "America/Jamaica",
+                                    "America/Juneau",
+                                    "America/Kentucky/Louisville",
+                                    "America/Kentucky/Monticello",
+                                    "America/La_Paz",
+                                    "America/Lima",
+                                    "America/Los_Angeles",
+                                    "America/Maceio",
+                                    "America/Managua",
+                                    "America/Manaus",
+                                    "America/Martinique",
+                                    "America/Matamoros",
+                                    "America/Mazatlan",
+                                    "America/Menominee",
+                                    "America/Merida",
+                                    "America/Mexico_City",
+                                    "America/Miquelon",
+                                    "America/Moncton",
+                                    "America/Monterrey",
+                                    "America/Montevideo",
+                                    "America/Montreal",
+                                    "America/Montserrat",
+                                    "America/Nassau",
+                                    "America/New_York",
+                                    "America/Nipigon",
+                                    "America/Nome",
+                                    "America/Noronha",
+                                    "America/North_Dakota/Center",
+                                    "America/North_Dakota/New_Salem",
+                                    "America/Ojinaga",
+                                    "America/Panama",
+                                    "America/Pangnirtung",
+                                    "America/Paramaribo",
+                                    "America/Phoenix",
+                                    "America/Port-au-Prince",
+                                    "America/Porto_Velho",
+                                    "America/Port_of_Spain",
+                                    "America/Puerto_Rico",
+                                    "America/Rainy_River",
+                                    "America/Rankin_Inlet",
+                                    "America/Recife",
+                                    "America/Regina",
+                                    "America/Resolute",
+                                    "America/Rio_Branco",
+                                    "America/Santarem",
+                                    "America/Santa_Isabel",
+                                    "America/Santiago",
+                                    "America/Santo_Domingo",
+                                    "America/Sao_Paulo",
+                                    "America/Scoresbysund",
+                                    "America/St_Johns",
+                                    "America/St_Kitts",
+                                    "America/St_Lucia",
+                                    "America/St_Thomas",
+                                    "America/St_Vincent",
+                                    "America/Swift_Current",
+                                    "America/Tegucigalpa",
+                                    "America/Thule",
+                                    "America/Thunder_Bay",
+                                    "America/Tijuana",
+                                    "America/Toronto",
+                                    "America/Tortola",
+                                    "America/Vancouver",
+                                    "America/Whitehorse",
+                                    "America/Winnipeg",
+                                    "America/Yakutat",
+                                    "America/Yellowknife",
+                                    "Antarctica/Casey",
+                                    "Antarctica/Davis",
+                                    "Antarctica/DumontDUrville",
+                                    "Antarctica/Macquarie",
+                                    "Antarctica/Mawson",
+                                    "Antarctica/McMurdo",
+                                    "Antarctica/Palmer",
+                                    "Antarctica/Rothera",
+                                    "Antarctica/Syowa",
+                                    "Antarctica/Vostok",
+                                    "Asia/Aden",
+                                    "Asia/Almaty",
+                                    "Asia/Amman",
+                                    "Asia/Anadyr",
+                                    "Asia/Aqtau",
+                                    "Asia/Aqtobe",
+                                    "Asia/Ashgabat",
+                                    "Asia/Baghdad",
+                                    "Asia/Bahrain",
+                                    "Asia/Baku",
+                                    "Asia/Bangkok",
+                                    "Asia/Beirut",
+                                    "Asia/Bishkek",
+                                    "Asia/Brunei",
+                                    "Asia/Choibalsan",
+                                    "Asia/Chongqing",
+                                    "Asia/Colombo",
+                                    "Asia/Damascus",
+                                    "Asia/Dhaka",
+                                    "Asia/Dili",
+                                    "Asia/Dubai",
+                                    "Asia/Dushanbe",
+                                    "Asia/Gaza",
+                                    "Asia/Harbin",
+                                    "Asia/Hong_Kong",
+                                    "Asia/Hovd",
+                                    "Asia/Ho_Chi_Minh",
+                                    "Asia/Irkutsk",
+                                    "Asia/Jakarta",
+                                    "Asia/Jayapura",
+                                    "Asia/Jerusalem",
+                                    "Asia/Kabul",
+                                    "Asia/Kamchatka",
+                                    "Asia/Karachi",
+                                    "Asia/Kashgar",
+                                    "Asia/Kathmandu",
+                                    "Asia/Kolkata",
+                                    "Asia/Krasnoyarsk",
+                                    "Asia/Kuala_Lumpur",
+                                    "Asia/Kuching",
+                                    "Asia/Kuwait",
+                                    "Asia/Macau",
+                                    "Asia/Magadan",
+                                    "Asia/Makassar",
+                                    "Asia/Manila",
+                                    "Asia/Muscat",
+                                    "Asia/Nicosia",
+                                    "Asia/Novokuznetsk",
+                                    "Asia/Novosibirsk",
+                                    "Asia/Omsk",
+                                    "Asia/Oral",
+                                    "Asia/Phnom_Penh",
+                                    "Asia/Pontianak",
+                                    "Asia/Pyongyang",
+                                    "Asia/Qatar",
+                                    "Asia/Qyzylorda",
+                                    "Asia/Rangoon",
+                                    "Asia/Riyadh",
+                                    "Asia/Sakhalin",
+                                    "Asia/Samarkand",
+                                    "Asia/Seoul",
+                                    "Asia/Shanghai",
+                                    "Asia/Singapore",
+                                    "Asia/Taipei",
+                                    "Asia/Tashkent",
+                                    "Asia/Tbilisi",
+                                    "Asia/Tehran",
+                                    "Asia/Thimphu",
+                                    "Asia/Tokyo",
+                                    "Asia/Ulaanbaatar",
+                                    "Asia/Urumqi",
+                                    "Asia/Vientiane",
+                                    "Asia/Vladivostok",
+                                    "Asia/Yakutsk",
+                                    "Asia/Yekaterinburg",
+                                    "Asia/Yerevan",
+                                    "Atlantic/Azores",
+                                    "Atlantic/Bermuda",
+                                    "Atlantic/Canary",
+                                    "Atlantic/Cape_Verde",
+                                    "Atlantic/Faroe",
+                                    "Atlantic/Madeira",
+                                    "Atlantic/Reykjavik",
+                                    "Atlantic/South_Georgia",
+                                    "Atlantic/Stanley",
+                                    "Atlantic/St_Helena",
+                                    "Australia/Adelaide",
+                                    "Australia/Brisbane",
+                                    "Australia/Broken_Hill",
+                                    "Australia/Currie",
+                                    "Australia/Darwin",
+                                    "Australia/Eucla",
+                                    "Australia/Hobart",
+                                    "Australia/Lindeman",
+                                    "Australia/Lord_Howe",
+                                    "Australia/Melbourne",
+                                    "Australia/Perth",
+                                    "Australia/Sydney",
+                                    "Canada/Atlantic",
+                                    "Canada/Central",
+                                    "Canada/Eastern",
+                                    "Canada/Mountain",
+                                    "Canada/Newfoundland",
+                                    "Canada/Pacific",
+                                    "Europe/Amsterdam",
+                                    "Europe/Andorra",
+                                    "Europe/Athens",
+                                    "Europe/Belgrade",
+                                    "Europe/Berlin",
+                                    "Europe/Brussels",
+                                    "Europe/Bucharest",
+                                    "Europe/Budapest",
+                                    "Europe/Chisinau",
+                                    "Europe/Copenhagen",
+                                    "Europe/Dublin",
+                                    "Europe/Gibraltar",
+                                    "Europe/Helsinki",
+                                    "Europe/Istanbul",
+                                    "Europe/Kaliningrad",
+                                    "Europe/Kiev",
+                                    "Europe/Lisbon",
+                                    "Europe/London",
+                                    "Europe/Luxembourg",
+                                    "Europe/Madrid",
+                                    "Europe/Malta",
+                                    "Europe/Minsk",
+                                    "Europe/Monaco",
+                                    "Europe/Moscow",
+                                    "Europe/Oslo",
+                                    "Europe/Paris",
+                                    "Europe/Prague",
+                                    "Europe/Riga",
+                                    "Europe/Rome",
+                                    "Europe/Samara",
+                                    "Europe/Simferopol",
+                                    "Europe/Sofia",
+                                    "Europe/Stockholm",
+                                    "Europe/Tallinn",
+                                    "Europe/Tirane",
+                                    "Europe/Uzhgorod",
+                                    "Europe/Vaduz",
+                                    "Europe/Vienna",
+                                    "Europe/Vilnius",
+                                    "Europe/Volgograd",
+                                    "Europe/Warsaw",
+                                    "Europe/Zaporozhye",
+                                    "Europe/Zurich",
+                                    "GMT",
+                                    "Indian/Antananarivo",
+                                    "Indian/Chagos",
+                                    "Indian/Christmas",
+                                    "Indian/Cocos",
+                                    "Indian/Comoro",
+                                    "Indian/Kerguelen",
+                                    "Indian/Mahe",
+                                    "Indian/Maldives",
+                                    "Indian/Mauritius",
+                                    "Indian/Mayotte",
+                                    "Indian/Reunion",
+                                    "Pacific/Apia",
+                                    "Pacific/Auckland",
+                                    "Pacific/Chatham",
+                                    "Pacific/Chuuk",
+                                    "Pacific/Easter",
+                                    "Pacific/Efate",
+                                    "Pacific/Enderbury",
+                                    "Pacific/Fakaofo",
+                                    "Pacific/Fiji",
+                                    "Pacific/Funafuti",
+                                    "Pacific/Galapagos",
+                                    "Pacific/Gambier",
+                                    "Pacific/Guadalcanal",
+                                    "Pacific/Guam",
+                                    "Pacific/Honolulu",
+                                    "Pacific/Johnston",
+                                    "Pacific/Kiritimati",
+                                    "Pacific/Kosrae",
+                                    "Pacific/Kwajalein",
+                                    "Pacific/Majuro",
+                                    "Pacific/Marquesas",
+                                    "Pacific/Midway",
+                                    "Pacific/Nauru",
+                                    "Pacific/Niue",
+                                    "Pacific/Norfolk",
+                                    "Pacific/Noumea",
+                                    "Pacific/Pago_Pago",
+                                    "Pacific/Palau",
+                                    "Pacific/Pitcairn",
+                                    "Pacific/Pohnpei",
+                                    "Pacific/Port_Moresby",
+                                    "Pacific/Rarotonga",
+                                    "Pacific/Saipan",
+                                    "Pacific/Tahiti",
+                                    "Pacific/Tarawa",
+                                    "Pacific/Tongatapu",
+                                    "Pacific/Wake",
+                                    "Pacific/Wallis",
+                                    "UTC"
+                                ],
+                                "required": true,
+                                "showSearch": true
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "apisecret"
+                ]
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "datePicker",
+                            "label": "Import Mixpanel events since",
+                            "value": "startFromDate",
+                            "format": "YYYY-MM-DD",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2CvoBhaza0uIgPMEwWVL7liFjOd",
+        "name": "canny",
+        "displayName": "Canny",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2IXTS1iwesFOFEREHG2NjtUFzLw",
+        "name": "satismeter",
+        "displayName": "SatisMeter",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {
+            "hidden": false
+        },
+        "type": "cloud"
+    },
+    {
+        "id": "29HQaeEFbxGnpcA600tFtu9VJ9h",
+        "name": "singer-hubspot",
+        "displayName": "HubSpot",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "hubspot"
+            },
+            "image": "rudderstack/source-hubspot:v8.1.10",
+            "digest": "sha256:4e4d43d688a81ce3e166b5d7c20c0050101c43f8b50187e0da8d63a37e2b412b",
+            "isBeta": false
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2FTwqGdB5QTanyu2srpkwtqvmDy",
+        "name": "singer-zendesk-support",
+        "displayName": "Zendesk Support",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-zendesk-support:v8.2.2"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2WvtaUXpxQd6p6HjxTXh70L8gmF",
+        "name": "ortto",
+        "displayName": "Ortto",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "27yRLqzHXjyi5KXx4qLDHM9AnbG",
+        "name": "singer-google_adwords",
+        "displayName": "Google ads",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "provider": "Google"
+            },
+            "image": "rudderstack/source-google-ads:v6.2.0-fix-google-ads-validation-check"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FNjFlFE30eicjpfHOUv2nhqZ",
+        "name": "singer-bing-ads",
+        "displayName": "Bing Ads",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-bing-ads:v5.3.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1z2OTbrpUT0PFBhxQUxKVRVontJ",
+        "name": "singer-chargebee",
+        "displayName": "Chargebee",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-chargebee:v5.3.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "215k1PhlrONIAJFWJJnMQjfJbdQ",
+        "name": "singer-intercom",
+        "displayName": "Intercom",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-intercom:v8.1.12"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2CIn2Jizlw1UYQCfHxFTHwITHw9",
+        "name": "singer-recurly",
+        "displayName": "Recurly",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-recurly:v5.3.0",
+            "isBeta": false
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FVfB0QkZqfDn5ehW4vtd3QUe",
+        "name": "singer-quickbooks",
+        "displayName": "Quickbooks",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "quickbooks"
+            },
+            "image": "rudderstack/source-quickbooks:v1",
+            "hidden": true,
+            "isBeta": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2XqKIRe7Nq4KEqVq6o62JgENZfE",
+        "name": "revenuecat",
+        "displayName": "Revenuecat",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {
+            "isBeta": true
+        },
+        "type": "cloud"
+    },
+    {
+        "id": "1lKfjyEs7AQiAvpgbNc6qR44PiA",
+        "name": "google_adwords",
+        "displayName": "Google AdWords",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/google_adwords/info/customerIds",
+                            "type": "dynamicSelect",
+                            "label": "Customer ID",
+                            "value": "customerId",
+                            "method": "post",
+                            "labelKey": "name",
+                            "required": true,
+                            "valueKey": "id"
+                        },
+                        {
+                            "type": "datePicker",
+                            "label": "Start date",
+                            "value": "startDate",
+                            "format": "YYYY-MM-DD",
+                            "required": true
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Conversion window",
+                            "value": "conversionWindow",
+                            "options": [
+                                {
+                                    "name": "Last 30 days",
+                                    "value": 30
+                                },
+                                {
+                                    "name": "Last 28 days",
+                                    "value": 28
+                                },
+                                {
+                                    "name": "Last 14 days",
+                                    "value": 14
+                                },
+                                {
+                                    "name": "Last 7 days",
+                                    "value": 7
+                                },
+                                {
+                                    "name": "Last 3 days",
+                                    "value": 3
+                                }
+                            ],
+                            "required": true,
+                            "defaultOption": {
+                                "name": "Last 30 days",
+                                "value": 30
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1qu6lpYiC3EnWGowQwxIn3zaixn",
+        "name": "quickbooks",
+        "displayName": "Quickbooks",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1w0YA2GAHu2uKlrXUBHfVsprYtI",
+        "name": "sendgrid",
+        "displayName": "SendGrid",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": ".*",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "API Key",
+                                "regex": "^(.{0,100})$",
+                                "value": "apiKey",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "apiKey"
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1nO0FaUQ0vce2QtWHNbphk1z6eu",
+        "name": "bing_ads",
+        "displayName": "Bing ads",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/bing_ads/info/accounts",
+                            "type": "dynamicSelect",
+                            "label": "Customer Account",
+                            "value": "customerAccountId",
+                            "method": "post",
+                            "labelKey": "accountName",
+                            "required": true,
+                            "valueKey": "accountId",
+                            "responseKey": "accounts"
+                        },
+                        {
+                            "url": "/cloudSources/info/roles/bing_ads/info/reports",
+                            "type": "dynamicSelect",
+                            "label": "Report Name",
+                            "value": "report.name",
+                            "method": "get",
+                            "required": true,
+                            "responseKey": "reports"
+                        },
+                        {
+                            "url": "/cloudSources/info/roles/bing_ads/info/columns/${preRequisiteValue}",
+                            "mode": "multiple",
+                            "type": "dynamicSelect",
+                            "label": "Report Columns",
+                            "value": "report.columns",
+                            "method": "get",
+                            "labelKey": "name",
+                            "multiple": true,
+                            "required": true,
+                            "valueKey": "name",
+                            "responseKey": "columns",
+                            "preRequisiteField": {
+                                "name": "report.name",
+                                "includeValue": true
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FbZw2Jq1C3X5WVtI9US22Jns",
+        "name": "singer-amplitude",
+        "displayName": "Amplitude",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-amplitude:v5.3.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FiuSenFFi7rhWAU2q9P1pIwX",
+        "name": "singer-stripe",
+        "displayName": "Stripe",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-stripe:v6.3.4"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FqRhtNsagY57gyU86BSUy2qB",
+        "name": "singer-mailchimp",
+        "displayName": "Mailchimp",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "mailchimp"
+            },
+            "image": "rudderstack/source-mailchimp:v1",
+            "hidden": true,
+            "isBeta": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2Fxqu1whi4jY7j6Oq5BCTdG00",
+        "name": "singer-pipedrive",
+        "displayName": "Pipedrive",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-pipedrive:v6.1.1",
+            "hidden": false,
+            "isBeta": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2H4nIl18EbdURLEBXFl3JrLEq2b",
+        "name": "GainsightPX",
+        "displayName": "Gainsight PX",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1nO1k57L7zUQjZA8D9sYKiKx3iS",
+        "name": "intercom",
+        "displayName": "Intercom",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2Iz5Ra9G943wsf4kfy1Uh9fCh1T",
+        "name": "pipedream",
+        "displayName": "Pipedream",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2F7tV0r1rGJwjaeiOrZlae4vUtq",
+        "name": "signl4",
+        "displayName": "SIGNL4",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2G2FtfV6QLT1sTtD74Fi1MqudLR",
+        "name": "singer-pardot",
+        "displayName": "Pardot",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "pardot"
+            },
+            "image": "rudderstack/source-pardot:v1",
+            "hidden": true,
+            "isBeta": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKfmBSRPI0frNtiPKAWV0fVn2a",
+        "name": "zendesk",
+        "displayName": "Zendesk",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Subdomain",
+                                "regex": "^(.{0,100})$",
+                                "value": "subdomain",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Zendesk username (Email)",
+                                "regex": "^(.{0,100})$",
+                                "value": "username",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Token",
+                                "regex": "^(.{0,100})$",
+                                "value": "token",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "username",
+                "secretFields": [
+                    "token"
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2Fv1RHrC39LrUltewR72R8Owb",
+        "name": "singer-freshdesk",
+        "displayName": "Freshdesk",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-freshdesk:v5.3.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKfjJOP1n2U0Y4hkAZcR4fLXek",
+        "name": "clickhouse",
+        "displayName": "ClickHouse",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(.{0,100})$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": true,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Database",
+                        "regex": "^(.{0,100})$",
+                        "value": "dbname",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": false,
+                        "inputFieldType": "password"
+                    },
+                    {
+                        "type": "checkbox",
+                        "label": "Secure",
+                        "value": "secure",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "label": "Skip verify",
+                        "value": "skipVerify",
+                        "default": false,
+                        "footerNote": "If you are using self signed certificates set this field to true",
+                        "preRequisiteField": {
+                            "name": "secure",
+                            "selectedValue": true
+                        }
+                    },
+                    {
+                        "trim": true,
+                        "type": "textareaInput",
+                        "label": "CA certificate",
+                        "regex": ".*",
+                        "value": "caCertificate",
+                        "required": false,
+                        "placeholder": "CA Certificate",
+                        "preRequisiteField": {
+                            "name": "secure",
+                            "selectedValue": true
+                        }
+                    }
+                ],
+                "docLinks": {
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/clickhouse",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/clickhouse/#specifying-the-data-to-import"
+                },
+                "nameField": "user",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "isCredentialsValidationSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "2B1VcpAvAsUW9EOHfp68yfZ8m9v",
+        "name": "databricks",
+        "displayName": "Databricks",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(.{0,100})$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": true,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": false
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Path",
+                        "regex": "^(.{0,100})$",
+                        "value": "path",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Token",
+                        "regex": "^(.{0,100})$",
+                        "value": "token",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password",
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": false
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Catalog",
+                        "regex": "^(.{0,100})$",
+                        "value": "catalog",
+                        "required": false,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "https://www.rudderstack.com/docs/reverse-etl/databricks/#granting-permissions",
+                    "setupInstructions": "https://www.rudderstack.com/docs/reverse-etl/databricks",
+                    "verifyingCredentials": "https://www.rudderstack.com/docs/reverse-etl/databricks/#what-do-the-three-validations-under-verifying-credentials-imply",
+                    "jsonMapperUseInstructions": "https://www.rudderstack.com/docs/reverse-etl/databricks/#specifying-the-data-to-import"
+                },
+                "nameField": "host",
+                "secretFields": [
+                    "token"
+                ]
+            }
+        ],
+        "options": {
+            "hidden": false,
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isAudienceSupported": true,
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "2Iz5SGykdNH7jyPh2I0K4LJXoWn",
+        "name": "singer-google-analytics-v4",
+        "displayName": "Google Analytics 4",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "provider": "Google",
+                "oauthRole": "singer-google-analytics"
+            },
+            "image": "rudderstack/source-google-analytics-v4:v4.0.1",
+            "gaMetricIds": [
+                "active1DayUsers",
+                "active28DayUsers",
+                "active7DayUsers",
+                "activeUsers",
+                "addToCarts",
+                "adUnitExposure",
+                "advertiserAdClicks",
+                "advertiserAdCost",
+                "advertiserAdCostPerClick",
+                "advertiserAdCostPerConversion",
+                "advertiserAdImpressions",
+                "averagePurchaseRevenue",
+                "averagePurchaseRevenuePerPayingUser",
+                "averagePurchaseRevenuePerUser",
+                "averageRevenuePerUser",
+                "averageSessionDuration",
+                "bounceRate",
+                "cartToViewRate",
+                "checkouts",
+                "cohortActiveUsers",
+                "cohortTotalUsers",
+                "conversions",
+                "crashAffectedUsers",
+                "crashFreeUsersRate",
+                "dauPerMau",
+                "dauPerWau",
+                "ecommercePurchases",
+                "engagedSessions",
+                "engagementRate",
+                "eventCount",
+                "eventCountPerUser",
+                "eventsPerSession",
+                "eventValue",
+                "firstTimePurchaserConversionRate",
+                "firstTimePurchasers",
+                "firstTimePurchasersPerNewUser",
+                "itemListClickEvents",
+                "itemListClickThroughRate",
+                "itemListViewEvents",
+                "itemPromotionClickThroughRate",
+                "itemRevenue",
+                "itemsAddedToCart",
+                "itemsCheckedOut",
+                "itemsClickedInList",
+                "itemsClickedInPromotion",
+                "itemsPurchased",
+                "itemsViewed",
+                "itemsViewedInList",
+                "itemsViewedInPromotion",
+                "itemViewEvents",
+                "newUsers",
+                "organicGoogleSearchAveragePosition",
+                "organicGoogleSearchClicks",
+                "organicGoogleSearchClickThroughRate",
+                "organicGoogleSearchImpressions",
+                "promotionClicks",
+                "promotionViews",
+                "publisherAdClicks",
+                "publisherAdImpressions",
+                "purchaserConversionRate",
+                "purchaseRevenue",
+                "purchaseToViewRate",
+                "returnOnAdSpend",
+                "screenPageViews",
+                "screenPageViewsPerSession",
+                "screenPageViewsPerUser",
+                "scrolledUsers",
+                "sessionConversionRate",
+                "sessions",
+                "sessionsPerUser",
+                "shippingAmount",
+                "taxAmount",
+                "totalAdRevenue",
+                "totalPurchasers",
+                "totalRevenue",
+                "totalUsers",
+                "transactions",
+                "transactionsPerPurchaser",
+                "userConversionRate",
+                "userEngagementDuration",
+                "wauPerMau",
+                "conversions:purchase",
+                "sessionConversionRate:purchase",
+                "userConversionRate:purchase"
+            ],
+            "gaDimensionIds": [
+                "achievementId",
+                "adFormat",
+                "adSourceName",
+                "adUnitName",
+                "appVersion",
+                "audienceId",
+                "audienceName",
+                "brandingInterest",
+                "browser",
+                "campaignId",
+                "campaignName",
+                "character",
+                "city",
+                "cityId",
+                "cohort",
+                "cohortNthDay",
+                "cohortNthMonth",
+                "cohortNthWeek",
+                "contentGroup",
+                "contentId",
+                "contentType",
+                "continent",
+                "continentId",
+                "country",
+                "countryId",
+                "date",
+                "dateHour",
+                "dateHourMinute",
+                "day",
+                "dayOfWeek",
+                "dayOfWeekName",
+                "defaultChannelGroup",
+                "deviceCategory",
+                "deviceModel",
+                "eventName",
+                "fileExtension",
+                "fileName",
+                "firstSessionDate",
+                "firstUserCampaignId",
+                "firstUserCampaignName",
+                "firstUserDefaultChannelGroup",
+                "firstUserGoogleAdsAccountName",
+                "firstUserGoogleAdsAdGroupId",
+                "firstUserGoogleAdsAdGroupName",
+                "firstUserGoogleAdsAdNetworkType",
+                "firstUserGoogleAdsCampaignId",
+                "firstUserGoogleAdsCampaignName",
+                "firstUserGoogleAdsCampaignType",
+                "firstUserGoogleAdsCreativeId",
+                "firstUserGoogleAdsCustomerId",
+                "firstUserGoogleAdsKeyword",
+                "firstUserGoogleAdsQuery",
+                "firstUserManualAdContent",
+                "firstUserManualTerm",
+                "firstUserMedium",
+                "firstUserSource",
+                "firstUserSourceMedium",
+                "firstUserSourcePlatform",
+                "fullPageUrl",
+                "googleAdsAccountName",
+                "googleAdsAdGroupId",
+                "googleAdsAdGroupName",
+                "googleAdsAdNetworkType",
+                "googleAdsCampaignId",
+                "googleAdsCampaignName",
+                "googleAdsCampaignType",
+                "googleAdsCreativeId",
+                "googleAdsCustomerId",
+                "googleAdsKeyword",
+                "googleAdsQuery",
+                "groupId",
+                "hostName",
+                "hour",
+                "isConversionEvent",
+                "isoWeek",
+                "isoYear",
+                "isoYearIsoWeek",
+                "itemAffiliation",
+                "itemBrand",
+                "itemCategory",
+                "itemCategory2",
+                "itemCategory3",
+                "itemCategory4",
+                "itemCategory5",
+                "itemId",
+                "itemListId",
+                "itemListName",
+                "itemListPosition",
+                "itemLocationID",
+                "itemName",
+                "itemPromotionCreativeName",
+                "itemPromotionCreativeSlot",
+                "itemPromotionId",
+                "itemPromotionName",
+                "itemVariant",
+                "landingPagePlusQueryString",
+                "language",
+                "languageCode",
+                "level",
+                "linkClasses",
+                "linkDomain",
+                "linkId",
+                "linkText",
+                "linkUrl",
+                "manualAdContent",
+                "manualTerm",
+                "medium",
+                "method",
+                "minute",
+                "mobileDeviceBranding",
+                "mobileDeviceMarketingName",
+                "mobileDeviceModel",
+                "month",
+                "newVsReturning",
+                "nthDay",
+                "nthHour",
+                "nthMinute",
+                "nthMonth",
+                "nthWeek",
+                "nthYear",
+                "operatingSystem",
+                "operatingSystemVersion",
+                "operatingSystemWithVersion",
+                "orderCoupon",
+                "outbound",
+                "pageLocation",
+                "pagePath",
+                "pagePathPlusQueryString",
+                "pageReferrer",
+                "pageTitle",
+                "percentScrolled",
+                "platform",
+                "platformDeviceCategory",
+                "region",
+                "screenResolution",
+                "searchTerm",
+                "sessionCampaignId",
+                "sessionCampaignName",
+                "sessionDefaultChannelGroup",
+                "sessionGoogleAdsAccountName",
+                "sessionGoogleAdsAdGroupId",
+                "sessionGoogleAdsAdGroupName",
+                "sessionGoogleAdsAdNetworkType",
+                "sessionGoogleAdsCampaignId",
+                "sessionGoogleAdsCampaignName",
+                "sessionGoogleAdsCampaignType",
+                "sessionGoogleAdsCreativeId",
+                "sessionGoogleAdsCustomerId",
+                "sessionGoogleAdsKeyword",
+                "sessionGoogleAdsQuery",
+                "sessionManualAdContent",
+                "sessionManualTerm",
+                "sessionMedium",
+                "sessionSa360AdGroupName",
+                "sessionSa360CampaignId",
+                "sessionSa360CampaignName",
+                "sessionSa360CreativeFormat",
+                "sessionSa360EngineAccountId",
+                "sessionSa360EngineAccountName",
+                "sessionSa360EngineAccountType",
+                "sessionSa360Keyword",
+                "sessionSa360Medium",
+                "sessionSa360Query",
+                "sessionSa360Source",
+                "sessionSource",
+                "sessionSourceMedium",
+                "sessionSourcePlatform",
+                "shippingTier",
+                "signedInWithUserId",
+                "source",
+                "sourceMedium",
+                "sourcePlatform",
+                "streamId",
+                "streamName",
+                "testDataFilterId",
+                "testDataFilterName",
+                "transactionId",
+                "unifiedPagePathScreen",
+                "unifiedPageScreen",
+                "unifiedScreenClass",
+                "unifiedScreenName",
+                "userAgeBracket",
+                "userGender",
+                "videoProvider",
+                "videoTitle",
+                "videoUrl",
+                "virtualCurrencyName",
+                "visible",
+                "week",
+                "year",
+                "yearMonth",
+                "yearWeek"
+            ]
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FVEae11TZ9Gj4ysin4uMrke2",
+        "name": "singer-google-sheets",
+        "displayName": "Google Sheets",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "provider": "Google"
+            },
+            "image": "rudderstack/source-google-sheets:v5.3.0",
+            "supportsDestinationSyncMode": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2KDO6WVQFsdxrtxj3qkyC4bS9MD",
+        "name": "pagerduty",
+        "displayName": "PagerDuty",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "2CIrY80Pg4VvhftUYx2vgfxocLg",
+        "name": "singer-salesforce",
+        "displayName": "Salesforce",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "singer-salesforce"
+            },
+            "image": "rudderstack/source-salesforce:v4.0.5-alpha.dc36e92d3b",
+            "isBeta": false
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1mv4HioeTXCjsMxyN4b8lpcO7yj",
+        "name": "marketo",
+        "displayName": "Marketo",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": "^(.{0,100})$",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Marketo Client ID",
+                                "regex": "^(.{0,100})$",
+                                "value": "clientId",
+                                "required": true,
+                                "placeholder": "e.g: client id",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Marketo Client Secret",
+                                "regex": "^(.{0,100})$",
+                                "value": "clientSecret",
+                                "secret": true,
+                                "required": true,
+                                "placeholder": "e.g: client secret",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Marketo Munchkin Account ID",
+                                "regex": "^(.{0,100})$",
+                                "value": "munchkinId",
+                                "secret": true,
+                                "required": true,
+                                "placeholder": "e.g: munchkin account id",
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "clientSecret"
+                ]
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "datePicker",
+                            "label": "Start date",
+                            "value": "startDate",
+                            "format": "YYYY-MM-DD",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2FUIuwuhMwfZAmT5eswa0FauFCx",
+        "name": "singer-zendesk-chat",
+        "displayName": "Zendesk Chat",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "auth": {
+                "oauthRole": "singer-zendesk-chat"
+            },
+            "image": "rudderstack/source-zendesk-chat:v5.3.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2LjIxuugktfE20hTXNUiBt4d9M7",
+        "name": "singer-shopify",
+        "displayName": "Shopify",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-shopify:v8.1.0"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1nvBDW6Jpo28nQqcKzJjzRpcVSV",
+        "name": "xero",
+        "displayName": "Xero",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/xero/info/tenants",
+                            "type": "dynamicSelect",
+                            "label": "Tenant Id",
+                            "value": "tenantId",
+                            "method": "post",
+                            "labelKey": "tenantId",
+                            "required": true,
+                            "valueKey": "tenantId"
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Earliest report year",
+                            "value": "reportStartYear",
+                            "default": 2019,
+                            "options": [
+                                2019,
+                                2018,
+                                2017,
+                                2016,
+                                2015
+                            ],
+                            "required": true,
+                            "footerNote": "Fetch monthly reports starting from this year."
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Report starting month",
+                            "value": "reportPastMonths",
+                            "default": 6,
+                            "options": [
+                                1,
+                                3,
+                                6,
+                                12
+                            ],
+                            "required": true,
+                            "footerNote": "Starting month for each monthly report."
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "auth": {
+                "provider": "Xero"
+            },
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKfk24evQm5USNDbZBzapoX1Wi",
+        "name": "google_analytics",
+        "displayName": "Google Analytics",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/google_analytics/info/views",
+                            "type": "dynamicSelect",
+                            "label": "View",
+                            "value": "viewId",
+                            "method": "post",
+                            "labelKey": "name",
+                            "required": true,
+                            "valueKey": "id",
+                            "responseKey": "views"
+                        },
+                        {
+                            "url": "/cloudSources/info/roles/google_analytics/info/columns",
+                            "mode": "multiple",
+                            "type": "dynamicSelect",
+                            "label": "Dimensions",
+                            "value": "dimensions",
+                            "method": "post",
+                            "labelKey": "name",
+                            "required": true,
+                            "valueKey": "id",
+                            "responseKey": "dimensions",
+                            "preRequisiteField": {
+                                "name": "viewId",
+                                "includeValue": true,
+                                "includeToRequest": {
+                                    "transformKey": "id"
+                                }
+                            }
+                        },
+                        {
+                            "url": "/cloudSources/info/roles/google_analytics/info/columns",
+                            "mode": "multiple",
+                            "type": "dynamicSelect",
+                            "label": "Metrics",
+                            "value": "metrics",
+                            "method": "post",
+                            "labelKey": "name",
+                            "required": true,
+                            "valueKey": "id",
+                            "responseKey": "metrics",
+                            "preRequisiteField": {
+                                "name": "viewId",
+                                "includeValue": true,
+                                "includeToRequest": {
+                                    "transformKey": "id"
+                                }
+                            }
+                        },
+                        {
+                            "type": "datePicker",
+                            "label": "Start from date",
+                            "value": "dateSince",
+                            "format": "YYYY-MM-DD",
+                            "required": true,
+                            "description": "Earliest report date",
+                            "preRequisiteField": {
+                                "name": "viewId"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2DiBhQRDMBYSxnuwEdsxK42f56y",
+        "name": "singer-mixpanel",
+        "displayName": "Mixpanel",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-mixpanel:v8.1.10"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2G2FlFtDkroPMShXpLvoB2k3oxe",
+        "name": "singer-facebook-marketing",
+        "displayName": "Facebook Ads",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-facebook-marketing:v8.2.1"
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1nO0N6g2pILIDqsSPgRWCsDrYkU",
+        "name": "pipedrive",
+        "displayName": "Pipedrive",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": "^(.{0,100})$",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Api Key",
+                                "regex": "^(.{0,100})$",
+                                "value": "apiKey",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "apiKey"
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1jEXvN08pLwYAGPMJJOhvIyA3F3",
+        "name": "google_sheets",
+        "displayName": "Google Sheets",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/google_sheets/info/sheets",
+                            "type": "dynamicSelect",
+                            "label": "SpreadSheet",
+                            "value": "spreadsheet",
+                            "method": "post",
+                            "labelKey": "filename",
+                            "required": true,
+                            "valueKey": "id",
+                            "showSearch": true,
+                            "responseKey": "sheets"
+                        },
+                        {
+                            "url": "/cloudSources/info/roles/google_sheets/info/sheets/${preRequisiteValue}",
+                            "type": "dynamicSelect",
+                            "label": "Worksheet",
+                            "value": "worksheet",
+                            "method": "post",
+                            "labelKey": "properties.title",
+                            "required": true,
+                            "valueKey": "properties.title",
+                            "showSearch": true,
+                            "responseKey": "sheets",
+                            "preRequisiteField": {
+                                "name": "spreadsheet",
+                                "includeValue": true
+                            }
+                        },
+                        {
+                            "min": 1,
+                            "type": "textInput",
+                            "label": "Header row",
+                            "value": "header_offset",
+                            "default": 1,
+                            "required": true,
+                            "inputFieldType": "number",
+                            "preRequisiteField": {
+                                "name": "spreadsheet"
+                            },
+                            "disabledNormalMode": true
+                        },
+                        {
+                            "min": 1,
+                            "type": "textInput",
+                            "label": "First data row",
+                            "value": "top_row_offset",
+                            "inputFieldType": "number",
+                            "preRequisiteField": {
+                                "name": "spreadsheet"
+                            },
+                            "disabledNormalMode": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1pf35z0NWXK9G5FdwF75DiCYfMn",
+        "name": "pardot",
+        "displayName": "Pardot",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": ".*",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Email",
+                                "value": "email",
+                                "required": true
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "User Key",
+                                "value": "userKey",
+                                "required": true
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Password",
+                                "value": "password",
+                                "required": true
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKfm47IlzXQNXD3C3pk6mZtb1S",
+        "name": "snowflake",
+        "displayName": "Snowflake",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Account",
+                        "regex": "^(.{0,100})$",
+                        "value": "account",
+                        "required": true,
+                        "regexErrorMessage": "Invalid value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Database",
+                        "regex": "^(.{0,100})$",
+                        "value": "dbname",
+                        "required": true,
+                        "regexErrorMessage": "Invalid value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Warehouse",
+                        "regex": "^(.{0,100})$",
+                        "value": "warehouse",
+                        "required": true,
+                        "regexErrorMessage": "Invalid value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid value"
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Role",
+                        "regex": "^(.{0,100})$",
+                        "value": "role",
+                        "required": false,
+                        "regexErrorMessage": "Invalid value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password"
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "https://docs.rudderstack.com/reverse-etl/snowflake/#granting-permissions",
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/snowflake",
+                    "verifyingCredentials": "https://docs.rudderstack.com/reverse-etl/snowflake/#what-do-the-three-validations-under-verifying-credentials-imply",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/snowflake/#specifying-the-data-to-import"
+                },
+                "nameField": "account",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isAudienceSupported": true,
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "1lKfleR0YwloYiLdsrt8wbTyDxR",
+        "name": "redshift",
+        "displayName": "Redshift",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(.{0,100})$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": true,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Database",
+                        "regex": "^(.{0,100})$",
+                        "value": "dbname",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password"
+                    },
+                    {
+                        "type": "singleSelect",
+                        "label": "SSL Mode",
+                        "value": "sslMode",
+                        "options": [
+                            {
+                                "name": "disable",
+                                "value": "disable"
+                            },
+                            {
+                                "name": "require",
+                                "value": "require"
+                            }
+                        ],
+                        "required": true,
+                        "defaultOption": {
+                            "name": "disable",
+                            "value": "disable"
+                        }
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "https://docs.rudderstack.com/reverse-etl/amazon-redshift/#granting-permissions",
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/amazon-redshift",
+                    "verifyingCredentials": "https://docs.rudderstack.com/reverse-etl/amazon-redshift/#what-do-the-three-validations-under-verifying-credentials-imply",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/amazon-redshift/#specifying-the-data-to-import"
+                },
+                "nameField": "user",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isAudienceSupported": true,
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "28c9zKySvyIWoBAOXfiJp5PNXz1",
+        "name": "iterable",
+        "displayName": "Iterable",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1nO0MDuAYGKfwdhgCpyLFR1lHti",
+        "name": "zendesk_chat",
+        "displayName": "Zendesk Chat",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Subdomain",
+                                "regex": "^(.{0,100})$",
+                                "value": "subdomain",
+                                "required": true,
+                                "footerNote": "Subdomain of your Zendesk Chat URL",
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1acY4PznURHGvYZxzOI5VyRNTav",
+        "name": "ReactNative",
+        "displayName": "React Native",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "reactnative"
+    },
+    {
+        "id": "1YL4jDMoPIXvtoRyzAfcDssfyWE",
+        "name": "Unity",
+        "displayName": "Unity",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "unity"
+    },
+    {
+        "id": "1ZOGFkMltl5OmWdQiNRzNiN618P",
+        "name": "Node",
+        "displayName": "Node",
+        "category": null,
+        "uiConfig": null,
+        "options": null,
+        "type": "cloud"
+    },
+    {
+        "id": "2PafUhpwTGi6vijGoT6muflRBgj",
+        "name": "singer-marketo",
+        "displayName": "Marketo V2",
+        "category": "singer-protocol",
+        "uiConfig": null,
+        "options": {
+            "image": "rudderstack/source-marketo:v6.3.0",
+            "isBeta": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "2PafSoQxOJsRY2c3H72pPJbIj2m",
+        "name": "formsort",
+        "displayName": "Formsort",
+        "category": "webhook",
+        "uiConfig": null,
+        "options": {},
+        "type": "cloud"
+    },
+    {
+        "id": "1qD1jwa7OjnEwb4AJIwwGQdmFyg",
+        "name": "stripe",
+        "displayName": "Stripe",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "singleSelect",
+                            "label": "Stripe Version",
+                            "value": "stripeVersion",
+                            "options": [
+                                {
+                                    "name": "2020-08-27",
+                                    "value": "2020-08-27"
+                                },
+                                {
+                                    "name": "2020-03-02",
+                                    "value": "2020-03-02"
+                                },
+                                {
+                                    "name": "2019-12-03",
+                                    "value": "2019-12-03"
+                                },
+                                {
+                                    "name": "2019-11-05",
+                                    "value": "2019-11-05"
+                                },
+                                {
+                                    "name": "2019-10-17",
+                                    "value": "2019-10-17"
+                                },
+                                {
+                                    "name": "2019-10-08",
+                                    "value": "2019-10-08"
+                                },
+                                {
+                                    "name": "2019-09-09",
+                                    "value": "2019-09-09"
+                                },
+                                {
+                                    "name": "2019-08-14",
+                                    "value": "2019-08-14"
+                                },
+                                {
+                                    "name": "2019-05-16",
+                                    "value": "2019-05-16"
+                                },
+                                {
+                                    "name": "2019-03-14",
+                                    "value": "2019-03-14"
+                                },
+                                {
+                                    "name": "2019-02-19",
+                                    "value": "2019-02-19"
+                                },
+                                {
+                                    "name": "2019-02-11",
+                                    "value": "2019-02-11"
+                                },
+                                {
+                                    "name": "2018-11-08",
+                                    "value": "2018-11-08"
+                                },
+                                {
+                                    "name": "2018-10-31",
+                                    "value": "2018-10-31"
+                                },
+                                {
+                                    "name": "2018-09-24",
+                                    "value": "2018-09-24"
+                                },
+                                {
+                                    "name": "2018-08-23",
+                                    "value": "2018-08-23"
+                                },
+                                {
+                                    "name": "2018-07-27",
+                                    "value": "2018-07-27"
+                                },
+                                {
+                                    "name": "2018-05-21",
+                                    "value": "2018-05-21"
+                                },
+                                {
+                                    "name": "2018-02-28",
+                                    "value": "2018-02-28"
+                                },
+                                {
+                                    "name": "2018-02-05",
+                                    "value": "2018-02-05"
+                                },
+                                {
+                                    "name": "2018-01-23",
+                                    "value": "2018-01-23"
+                                },
+                                {
+                                    "name": "2017-12-14",
+                                    "value": "2017-12-14"
+                                },
+                                {
+                                    "name": "2017-08-15",
+                                    "value": "2017-08-15"
+                                },
+                                {
+                                    "name": "2017-05-25",
+                                    "value": "2017-05-25"
+                                },
+                                {
+                                    "name": "2017-04-06",
+                                    "value": "2017-04-06"
+                                },
+                                {
+                                    "name": "2017-02-14",
+                                    "value": "2017-02-14"
+                                }
+                            ],
+                            "required": true,
+                            "defaultOption": {
+                                "name": "Default Version",
+                                "value": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1nO0JbTGyWPVxkCs1GjHfSX0zFq",
+        "name": "netsuite",
+        "displayName": "NetSuite",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": "^(.{0,100})$",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Account Id",
+                                "regex": "^(.{0,100})$",
+                                "value": "accountId",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Consumer Key",
+                                "regex": "^(.{0,100})$",
+                                "value": "consumerKey",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Consumer Secret",
+                                "regex": "^(.{0,100})$",
+                                "value": "consumerSecret",
+                                "required": true,
+                                "inputType": "password",
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Token ID",
+                                "regex": "^(.{0,100})$",
+                                "value": "tokenId",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "Token Secret",
+                                "regex": "^(.{0,100})$",
+                                "value": "tokenSecret",
+                                "required": true,
+                                "inputType": "password",
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "consumerKey",
+                    "consumerSecret",
+                    "tokenId",
+                    "tokenSecret"
+                ]
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "datePicker",
+                            "label": "Historical sync start date",
+                            "value": "startDateIso",
+                            "format": "YYYY-MM-DD",
+                            "required": true
+                        },
+                        {
+                            "type": "textInput",
+                            "label": "Rudder Restlet URL",
+                            "value": "restletUrl",
+                            "footerNote": "In order to sync saved searches, you need to install https://js.blendo.co/netsuite/v1/restlet.js script in your Netsuite account, and paste the generated Restlet URL here."
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1sl3ublVAB0JY2Pyb6Nnfb54k4v",
+        "name": "active_campaign",
+        "displayName": "Active campaign",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "form",
+                "config": [
+                    {
+                        "fields": [
+                            {
+                                "type": "textInput",
+                                "label": "Account Name",
+                                "regex": ".*",
+                                "value": "rudder_account_name",
+                                "required": true,
+                                "placeholder": "e.g: account name"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "URL",
+                                "value": "url",
+                                "required": true,
+                                "placeholder": "e.g https://rudderstack.api-us1.com"
+                            },
+                            {
+                                "type": "textInput",
+                                "label": "API Key",
+                                "regex": "^(.{0,100})$",
+                                "value": "apiKey",
+                                "required": true,
+                                "regexErrorMessage": "Invalid Value"
+                            }
+                        ]
+                    }
+                ],
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "apiKey"
+                ]
+            }
+        },
+        "options": null,
+        "type": "cloudSource"
+    },
+    {
+        "id": "1mv4J5uzCbh0iBoiUkENv9UL0WT",
+        "name": "s3",
+        "displayName": "Amazon S3",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "type": "singleSelect",
+                        "label": "Connection Mode",
+                        "value": "connectionMode",
+                        "options": [
+                            {
+                                "name": "Cross-Account Role (recommended)",
+                                "value": "crossAccountRole"
+                            },
+                            {
+                                "name": "Access Key",
+                                "value": "accessKey"
+                            }
+                        ],
+                        "defaultOption": {
+                            "value": "crossAccountRole"
+                        }
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Account Name",
+                        "regex": "^(.{0,100})$",
+                        "value": "rudder_account_name",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "AWS Access Key ID",
+                        "regex": "^(.{0,100})$",
+                        "value": "accessKeyID",
+                        "secret": true,
+                        "required": true,
+                        "placeholder": "e.g: access-key-id",
+                        "preRequisiteField": {
+                            "name": "connectionMode",
+                            "selectedValue": "accessKey"
+                        },
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "AWS Secret Access Key",
+                        "regex": "^(.{0,100})$",
+                        "value": "accessKey",
+                        "secret": true,
+                        "required": true,
+                        "placeholder": "e.g: secret-access-key",
+                        "inputFieldType": "password",
+                        "preRequisiteField": {
+                            "name": "connectionMode",
+                            "selectedValue": "accessKey"
+                        },
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Role ARN",
+                        "regex": "^(.{0,100})$",
+                        "value": "roleARN",
+                        "required": true,
+                        "footerNote": "Please follow our docs to create the role ARN. For creating the role add the Account ID: `422074288268` and use Workspace Id as the External Id.",
+                        "placeholder": "arn:aws:iam::xxxx:role/xxxx",
+                        "preRequisiteField": {
+                            "name": "connectionMode",
+                            "selectedValue": "crossAccountRole"
+                        },
+                        "regexErrorMessage": "Invalid Role ARN"
+                    }
+                ],
+                "docLinks": {
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/amazon-s3",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/amazon-s3/#specifying-the-data-to-import"
+                },
+                "nameField": "rudder_account_name",
+                "secretFields": [
+                    "accessKey"
+                ]
+            }
+        ],
+        "options": {
+            "skipWarehouseSchemaConfig": true,
+            "isCredentialsValidationSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "1lKfkCdvCrfUdqRjLpfTVgHwaec",
+        "name": "google_search_console",
+        "displayName": "Google Search Console",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "type": "textInput",
+                            "label": "Site URL",
+                            "value": "siteUrl",
+                            "required": true
+                        },
+                        {
+                            "mode": "multiple",
+                            "type": "singleSelect",
+                            "label": "Dimensions",
+                            "value": "date_preset",
+                            "options": [
+                                {
+                                    "name": "country",
+                                    "value": "country"
+                                },
+                                {
+                                    "name": "device",
+                                    "value": "device"
+                                },
+                                {
+                                    "name": "page",
+                                    "value": "page"
+                                }
+                            ],
+                            "required": true
+                        },
+                        {
+                            "type": "datePicker",
+                            "label": "Start from date",
+                            "value": "dateSince",
+                            "format": "YYYY-MM-DD",
+                            "required": true
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKfjBzuoNFJHfj35q2elruSN7C",
+        "name": "bigquery",
+        "displayName": "BigQuery",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "type": "textareaInput",
+                        "label": "Credentials",
+                        "regex": ".*",
+                        "value": "credentials",
+                        "secret": true,
+                        "subType": "JSON",
+                        "required": true,
+                        "labelNote": "GCP Service Account credentials JSON for RudderStack to use in loading data into your BigQuery database"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Project ID",
+                        "regex": "^(.{0,100})$",
+                        "value": "project",
+                        "readOnly": true,
+                        "required": true,
+                        "labelNote": "GCP Project ID where your BigQuery database is located.",
+                        "infoTooltip": "Inferred from project_id field in the credentials settings.",
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true,
+                        "obtainValueFromField": {
+                            "key": "project_id",
+                            "name": "credentials"
+                        }
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Service account",
+                        "regex": "^(.{0,100})$",
+                        "value": "serviceAccount",
+                        "readOnly": true,
+                        "required": true,
+                        "infoTooltip": "Inferred from client_email field in the credentials settings.",
+                        "regexErrorMessage": "Invalid Email Address",
+                        "addInAccountSummary": true,
+                        "obtainValueFromField": {
+                            "key": "client_email",
+                            "name": "credentials"
+                        }
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "https://docs.rudderstack.com/reverse-etl/google-bigquery/#granting-permissions",
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/google-bigquery",
+                    "verifyingCredentials": "https://docs.rudderstack.com/reverse-etl/google-bigquery/#what-do-the-three-validations-under-verifying-credentials-imply",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/google-bigquery/#specifying-the-data-to-import"
+                },
+                "nameField": "project",
+                "schemaAlias": "Dataset",
+                "secretFields": [
+                    "credentials"
+                ]
+            }
+        ],
+        "options": {
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isAudienceSupported": true,
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "1lKfjfhAW7WJPjD4RgXWnb8LfHI",
+        "name": "facebook_ads",
+        "displayName": "Facebook Ads",
+        "category": "cloud",
+        "uiConfig": {
+            "auth": {
+                "type": "OAuth"
+            },
+            "config": [
+                {
+                    "title": "Source Settings",
+                    "fields": [
+                        {
+                            "url": "/cloudSources/info/roles/facebook_ads/info/accounts",
+                            "type": "dynamicSelect",
+                            "label": "Page",
+                            "value": "account_id",
+                            "method": "post",
+                            "labelKey": "name",
+                            "required": true,
+                            "valueKey": "account_id",
+                            "responseKey": "data"
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Historical data",
+                            "value": "first_time_date_preset",
+                            "options": [
+                                {
+                                    "name": "Last 2 years",
+                                    "value": "last_2_years"
+                                },
+                                {
+                                    "name": "Last 1 year",
+                                    "value": "last_1_year"
+                                },
+                                {
+                                    "name": "Last 6 months",
+                                    "value": "last_6_months"
+                                },
+                                {
+                                    "name": "Last 90 days",
+                                    "value": "last_90_days"
+                                },
+                                {
+                                    "name": "Last 30 days",
+                                    "value": "last_30_days"
+                                },
+                                {
+                                    "name": "Last 28 days",
+                                    "value": "last_28_days"
+                                },
+                                {
+                                    "name": "Last 14 days",
+                                    "value": "last_14_days"
+                                },
+                                {
+                                    "name": "Last 7 days",
+                                    "value": "last_7_days"
+                                },
+                                {
+                                    "name": "Last 3 days",
+                                    "value": "last_3_days"
+                                }
+                            ],
+                            "required": true,
+                            "defaultOption": {
+                                "name": "Last 14 days",
+                                "value": "last_14_days"
+                            }
+                        },
+                        {
+                            "type": "singleSelect",
+                            "label": "Attribution window",
+                            "value": "date_preset",
+                            "options": [
+                                {
+                                    "name": "Last 90 days",
+                                    "value": "last_90_days"
+                                },
+                                {
+                                    "name": "Last 30 days",
+                                    "value": "last_30_days"
+                                },
+                                {
+                                    "name": "Last 28 days",
+                                    "value": "last_28_days"
+                                },
+                                {
+                                    "name": "Last 14 days",
+                                    "value": "last_14_days"
+                                },
+                                {
+                                    "name": "Last 7 days",
+                                    "value": "last_7_days"
+                                },
+                                {
+                                    "name": "Last 3 days",
+                                    "value": "last_3_days"
+                                }
+                            ],
+                            "required": true,
+                            "defaultOption": {
+                                "name": "Last 3 days",
+                                "value": "last_3_days"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "options": {
+            "hidden": true
+        },
+        "type": "cloudSource"
+    },
+    {
+        "id": "1lKflMWR2Ut7piaZepcFEsBVXQj",
+        "name": "postgres",
+        "displayName": "Postgres",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(.{0,100})$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "Database",
+                        "regex": "^(.{0,100})$",
+                        "value": "dbname",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "trim": true,
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": true,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "singleSelect",
+                        "label": "SSL Mode",
+                        "value": "sslMode",
+                        "options": [
+                            {
+                                "name": "disable",
+                                "value": "disable"
+                            },
+                            {
+                                "name": "require",
+                                "value": "require"
+                            }
+                        ],
+                        "required": true,
+                        "defaultOption": {
+                            "name": "disable",
+                            "value": "disable"
+                        }
+                    }
+                ],
+                "docLinks": {
+                    "grantPermissions": "https://docs.rudderstack.com/reverse-etl/postgresql/#granting-permissions",
+                    "setupInstructions": "https://docs.rudderstack.com/reverse-etl/postgresql",
+                    "verifyingCredentials": "https://docs.rudderstack.com/reverse-etl/postgresql/#what-do-the-three-validations-under-verifying-credentials-imply",
+                    "jsonMapperUseInstructions": "https://docs.rudderstack.com/reverse-etl/postgresql/#specifying-the-data-to-import"
+                },
+                "nameField": "user",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isSqlModelSupported": true
+        },
+        "type": "warehouse"
+    },
+    {
+        "id": "2ANLvHkKBYMDGzj8rU8KI4H3gpA",
+        "name": "mysql",
+        "displayName": "MySql",
+        "category": "warehouse",
+        "uiConfig": [
+            {
+                "title": "Connection Credentials",
+                "fields": [
+                    {
+                        "type": "textInput",
+                        "label": "Host",
+                        "regex": "^(.{0,100})$",
+                        "value": "host",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Port",
+                        "regex": "^(.{0,100})$",
+                        "value": "port",
+                        "required": true,
+                        "inputFieldType": "number",
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": false
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Database",
+                        "regex": "^(.{0,100})$",
+                        "value": "dbname",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value",
+                        "addInAccountSummary": true
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "User",
+                        "regex": "^(.{0,100})$",
+                        "value": "user",
+                        "required": true,
+                        "regexErrorMessage": "Invalid Value"
+                    },
+                    {
+                        "type": "textInput",
+                        "label": "Password",
+                        "regex": ".*",
+                        "value": "password",
+                        "secret": true,
+                        "required": true,
+                        "inputFieldType": "password"
+                    },
+                    {
+                        "type": "singleSelect",
+                        "label": "SSL Mode",
+                        "value": "sslmode",
+                        "options": [
+                            {
+                                "name": "false",
+                                "value": "false"
+                            },
+                            {
+                                "name": "skip-verify",
+                                "value": "skip-verify"
+                            }
+                        ],
+                        "required": true,
+                        "defaultOption": {
+                            "name": "false",
+                            "value": "false"
+                        }
+                    }
+                ],
+                "docLinks": {},
+                "nameField": "user",
+                "secretFields": [
+                    "password"
+                ]
+            }
+        ],
+        "options": {
+            "syncBehaviours": [
+                "upsert",
+                "mirror"
+            ],
+            "isSqlModelSupported": false
+        },
+        "type": "warehouse"
+    }
+]
