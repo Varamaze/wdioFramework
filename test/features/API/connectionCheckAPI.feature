@@ -1,6 +1,6 @@
 Feature: Connection Check Using API
 
-    @smoke
+    @demo
     Scenario Outline: Checking for connection from backend
         Given User logs in rudderstack using API and gets auth token
         Then User sends a GET request to <sources> and validates <sourceName> is present

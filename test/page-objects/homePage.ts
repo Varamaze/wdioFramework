@@ -7,12 +7,12 @@ class HomePage extends Page{
     }
 
     //Home Page Objects
-    get logoHomePage(){return $('//div[contains(@class,"header_logo")]')}
+    get logoHomePage(){return $('//div[contains(class,"header_logo")]')}
 
     //Action
     async validateHomePageLogo(){
         try {
-            await this.logoHomePage.waitForDisplayed({timeout: 10000});
+            await (await this.logoHomePage).waitForDisplayed({timeout: 5000});
         }catch (err){
             err.message = `Unable to validate home page logo. ${err.message}`
         }

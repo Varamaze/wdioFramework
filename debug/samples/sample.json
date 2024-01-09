@@ -1,0 +1,63 @@
+{
+    "config": {},
+    "liveEventsConfig": {},
+    "id": "2aelhVcJgvDm1EaUBk6Dz5RQDk0",
+    "name": "Test4",
+    "enabled": true,
+    "sourceDefinitionId": "1ZOGFkMltl5OmWdQiNRzNiN618P",
+    "createdBy": "2aXVGWDophET8M4xKDHc5EE11nr",
+    "workspaceId": "2aXVYFQalMHRU8FTeUBEhV79zll",
+    "sourceDefinition": {
+        "options": null,
+        "config": null,
+        "configSchema": null,
+        "uiConfig": null,
+        "id": "1ZOGFkMltl5OmWdQiNRzNiN618P",
+        "name": "Node",
+        "displayName": "Node",
+        "category": null,
+        "type": "cloud",
+        "createdAt": "2020-03-20T11:10:24.613Z",
+        "updatedAt": "2023-05-16T11:52:15.293Z"
+    },
+    "creator": {
+        "info": {
+            "freetrial": true
+        },
+        "id": "2aXVGWDophET8M4xKDHc5EE11nr",
+        "name": "Adam",
+        "email": "voham43334@tanlanav.com",
+        "phoneNumber": null,
+        "mfaStatus": null,
+        "verified": true,
+        "organization": "Zampa",
+        "hash": "",
+        "verificationToken": "",
+        "providerUserId": null,
+        "provider": null,
+        "tokenVersion": 7,
+        "createdAt": "2024-01-05T14:26:54.626Z",
+        "updatedAt": "2024-01-07T07:28:58.147Z"
+    },
+    "workspace": {
+        "id": "2aXVYFQalMHRU8FTeUBEhV79zll",
+        "name": "tanlanav-voham43334",
+        "token": "2aXVYHeYTGmOWtDBf9DCn7pVT57",
+        "organizationId": "2aXVYFXGH21lUr8tb1eJYERmbdo",
+        "dataPlaneURL": "https://tanlanavvmktwb.dataplane.rudderstack.com",
+        "defaultRegion": "US",
+        "enableReportingPii": true,
+        "eventAuditEnabled": false,
+        "useRudderServerStorage": true,
+        "dataRetentionPeriod": "default",
+        "environment": "PRODUCTION",
+        "isDefault": true,
+        "status": "ACTIVE",
+        "deploymentStatus": null,
+        "createdAt": "2024-01-05T14:29:16.786Z",
+        "updatedAt": "2024-01-05T14:29:17.432Z"
+    },
+    "writeKey": "2aelhWxdwzStGZsW84lJjzZxFQM",
+    "createdAt": "2024-01-08T04:10:44.250Z",
+    "updatedAt": "2024-01-08T04:10:44.250Z"
+}
