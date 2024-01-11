@@ -2,7 +2,7 @@ import type { Options } from '@wdio/types';
 import dotenv from "dotenv";
 
 dotenv.config();
-
+let headless = process.env.HEADLESS;
 export const config: Options.Testrunner = {
     //
     // ====================
@@ -65,9 +65,20 @@ export const config: Options.Testrunner = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        maxInstances: 1,
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: headless === 'Y' ? [
+                '--disable-web-security',
+                '--disable-dev-shm-usage',
+                '--no-sandbox',
+                '--disable-infobars',
+                '--headless',
+                '--disable-gpu',
+                '--window-size=1440,735'
+            ] : []
+        }
     }],
-
     //
     // ===================
     // Test Configurations

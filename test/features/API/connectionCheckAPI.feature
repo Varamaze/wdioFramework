@@ -1,6 +1,6 @@
 Feature: Connection Check Using API
 
-    @demo
+    @api
     Scenario Outline: Checking for connection from backend
         Given User logs in rudderstack using API and gets auth token
         Then User sends a GET request to <sources> and validates <sourceName> is present
@@ -8,4 +8,4 @@ Feature: Connection Check Using API
 
         Examples:
             | sources            | sourceName | addSourceName | addSources |
-            | SOURCES_DEFINITION | Node       | Test9         | ADD_SOURCE |
+            | SOURCES_DEFINITION | Node       | Test12        | ADD_SOURCE |

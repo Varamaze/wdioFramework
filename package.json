@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "qa:smoke": "npx wdio config/qa.conf.ts --cucumberOpts.tagExpression='@smoke'",
-    "stg:demo": "npx wdio config/stg.conf.ts --cucumberOpts.tagExpression='@smoke'",
+    "qa:smoke": "set HEADLESS = N && npx wdio config/qa.conf.ts --cucumberOpts.tagExpression= '@smoke'",
+    "stg:demo": "set HEADLESS = N && npx wdio config/stg.conf.ts --cucumberOpts.tagExpression='@smoke'",
     "prd:smoke": "npx wdio config/prd.conf.ts --cucumberOpts.tagExpression='@smoke'"
   },
   "author": "",

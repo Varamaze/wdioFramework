@@ -12,7 +12,9 @@ Given(/^User navigates to Rudderstack login page$/, async function () {
 Then(/^User enters username, password and clicks login button$/, async function () {
     try {
         //@ts-ignore
-        await loginPage.login(browser.options.userName, browser.options.password)
+        console.log(`>> USERNAME: ${await browser.options.userName}`)
+        //@ts-ignore
+        await loginPage.login(await browser.options.userName, await browser.options.password)
     } catch (err) {
         err.message = `Failed to login. ${err.message}`
     }
